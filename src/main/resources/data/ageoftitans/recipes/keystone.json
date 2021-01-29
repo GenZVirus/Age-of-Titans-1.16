@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        " B ",
+        "BFB",
+        " B "
+    ],
+    
+    "key":
+    {
+        "B":
+        {
+            "item": "minecraft:blaze_powder"
+        },
+         "F":
+        {
+            "item": "minecraft:flint"
+        }
+    },
+    
+    
+    "result":
+    {
+        "item": "ageoftitans:keystone",
+        "count": 1
+    }
+}

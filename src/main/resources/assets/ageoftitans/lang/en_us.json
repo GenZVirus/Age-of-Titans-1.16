@@ -1,0 +1,134 @@
+{
+	"gui.active": "Active",
+	"gui.passive": "Passive",
+	"gui.spend_points": "Spend Points",	
+	"gui.respec": "Respec",
+	
+	"gui.requirements.fruit_of_the_gods": "Requires the user to have eaten atleast 1 FRUIT OF THE GODS!",
+	"gui.requirements.level0": "Requires the user to have level 0 or above!",
+	"gui.requirements.level20": "Requires the user to have level 20 or above!",
+	"gui.requirements.level40": "Requires the user to have level 40 or above!",
+	"gui.requirements.level60": "Requires the user to have level 60 or above!",
+	"gui.requirements.level80": "Requires the user to have level 80 or above!",
+	"gui.requirements.level100": "Requires the user to have level 100 or above!",
+	
+	"gui.misc.hold_shift": "Hold Shift for details",
+	"gui.misc.damage": "Damage",
+	"gui.misc.bonus_damage": "Bonus Damage",
+	"gui.misc.cooldown": "Cooldown",
+	"gui.misc.cost": "Cost",
+	"gui.misc.duration": "Duration",
+	"gui.misc.seconds": "seconds",
+	"gui.misc.level": "Level",
+	"gui.misc.ratio": "Ratio",
+	"gui.misc.base": "Base",
+	"gui.misc.rage_points": "Rage Points",
+	"gui.misc.health_per_tick": "Health per tick",
+	
+	"gui.ability.force_field.name": "Force Field",
+	"gui.ability.force_field.description": "While out of combat, regenerate shield points up to ",
+	
+	"gui.ability.presence_of_a_god.name": "Presence of a God",
+	"gui.ability.presence_of_a_god.description": "Every 5 seconds life will grow in a radius of 5 blocks. Number of plants affected: ",
+	
+	"gui.ability.sword_slash.name": "Sword Slash",
+	"gui.ability.sword_slash.description": "Empowers the users sword with unending burning flames. Upon swinging the sword the flames will fly towards the target creating an fire explosion on hit and damaging all nearby targets.",
+	
+	"gui.ability.shield_bash.name": "Shield Bash",
+	"gui.ability.shield_bash.description": "Turns any shield into a deadly weapon. Upon blocking, all targets in front of the shield will be knocked back. Blocks with weak resistance will colaps when hit by the shockwave.",
+	
+	"gui.ability.berseker.name": "Berserker",
+	"gui.ability.berseker.description": "Empowers the user, giving strength and speed. Jumping over mountains is an easy fit. Even blocks and enemies can't resist your punches. If the target enemy doesn't have an helmet to protect his skull, a critical hit will be their undoing.",
+	
+	"gui.ability.chain.name": "Chain",
+	"gui.ability.chain.description": "Gives the user mobility by hooking blocks to thrust themselves towards the blocks. Or hook an enemy to pull them towards them.",
+	
+	"gui.ability.gravity_bomb.name": "Gravity Bomb",
+	"gui.ability.gravity_bomb.description": "Throw a powerful bomb that on impact pulls all entities, including the caster, into the center of the gravitational field increasing the damage taken. Boss Entities do not take increase damage.",
+	
+	"gui.ability.revitalise.name": "Revitalise",
+	"gui.ability.revitalise.description": "Heals the user overtime. While the health of the user is below the maximum, Revitalise will replenish what is missing as long as the user has rage points.",
+	
+	"gui.ability.reaper_of_souls.name": "Reaper of Souls",
+	"gui.ability.reaper_of_souls.description": "Gives a chance to add a soul to your balance when killing an entity. Current chance: ",
+	
+	"key.categories.ageoftitans": "Age of Titans",
+	"key.ability_tree": "Ability Tree",
+	"key.lockhud": "Lock/Unlock HUD",
+	"key.scroll_up": "Next Spell",
+	"key.scroll_down": "Previous Spell",
+	"key.fire_ability": "Fire Ability",
+
+	"effect.ageoftitans.titan": "Titan",
+	"effect.ageoftitans.monster_easy": "Monster",
+	"effect.ageoftitans.monster_normal": "Monster",
+	"effect.ageoftitans.monster_hard": "Monster",
+	"effect.ageoftitans.tamable_easy": "Pet",
+	"effect.ageoftitans.tamable_normal": "Pet",
+	"effect.ageoftitans.tamable_hard": "Pet",
+	"effect.ageoftitans.berserker": "Berserker",
+	"effect.ageoftitans.gravity_field": "Gravity Field",
+	"effect.ageoftitans.holy_plains": "Holy Plains",
+	"effect.ageoftitans.holy_hills": "Holy Hills",
+	"effect.ageoftitans.holy_mountains": "Holy Mountains",
+
+	"itemGroup.ageoftitans": "Age of Titans",
+	
+	"item.ageoftitans.fruit_of_the_gods": "\u00A7a\u00A7l\u00A7oFruit of the Gods",
+	
+	"item.ageoftitans.orb_of_eden": "\u00A7b\u00A7lOrb of Eden",
+	"item.ageoftitans.orb_of_nether": "\u00A7c\u00A7lOrb of Nether",
+	"item.ageoftitans.orb_of_end": "\u00A7a\u00A7lOrb of End",
+	"item.ageoftitans.orb_of_summoning": "\u00A71\u00A7lOrb of Summoning",
+	"item.ageoftitans.orb_of_dislocation": "\u00A74\u00A7lOrb of Dislocation",
+	"item.ageoftitans.orb_of_storage": "\u00A76\u00A7lOrb of Storage",
+	
+	"item.ageoftitans.keystone": "\u00A74\u00A7lKeystone",
+	
+	"item.ageoftitans.titanium_ingot": "\u00A7eTitanium Ingot",
+	
+	"item.ageoftitans.titanium_dagger": "\u00A7e\u00A7nTitanium Dagger",
+	"item.ageoftitans.demonic_dagger": "\u00A74\u00A7l\u00A7nDemonic Dagger",
+	"item.ageoftitans.poisonous_titanium_dagger": "\u00A72\u00A7l\u00A7nPoisonous Titanium Dagger",
+	"item.ageoftitans.withering_titanium_dagger": "\u00A74\u00A7l\u00A7nWithering Titanium Dagger",
+	"item.ageoftitans.titanium_sword": "\u00A7e\u00A7nTitanium Sword",
+	"item.ageoftitans.titanium_pickaxe": "\u00A7e\u00A7nTitanium Pickaxe",
+	"item.ageoftitans.titanium_axe": "\u00A7e\u00A7nTitanium Axe",
+	"item.ageoftitans.titanium_shovel": "\u00A7e\u00A7nTitanium Shovel",
+	"item.ageoftitans.titanium_hoe": "\u00A7e\u00A7nTitanium Hoe",
+	
+	"item.ageoftitans.heavy_titanium_helmet": "\u00A7e\u00A7nHeavy Titanium Helmet",
+	"item.ageoftitans.heavy_titanium_chestplate": "\u00A7e\u00A7nHeavy Titanium Chestplate",
+	"item.ageoftitans.heavy_titanium_leggings": "\u00A7e\u00A7nHeavy Titanium Leggings",
+	"item.ageoftitans.heavy_titanium_boots": "\u00A7e\u00A7nHeavy Titanium Boots",
+	
+	"item.ageoftitans.light_titanium_hood": "\u00A7e\u00A7nLight Titanium Hood",
+	"item.ageoftitans.light_titanium_chestplate": "\u00A7e\u00A7nLight Titanium Chestplate",
+	"item.ageoftitans.light_titanium_leggings": "\u00A7e\u00A7nLight Titanium Leggings",
+	"item.ageoftitans.light_titanium_boots": "\u00A7e\u00A7nLight Titanium Boots",
+	
+	"item.ageoftitans.soul_shard": "\u00A7e\u00A7nSoul Shard",
+	"item.ageoftitans.wither_dust": "\u00A74\u00A7nWither Dust",
+	
+	"block.ageoftitans.titanium_block": "\u00A7eTitanium Block",
+	"block.ageoftitans.titanium_ore": "\u00A7eTitanium Ore",
+	"block.ageoftitans.titan_locker": "\u00A76\u00A7lTitan's Locker",
+	"block.ageoftitans.eden_wood": "Eden Wood",
+	"block.ageoftitans.eden_wood_log": "Eden Wooden Log",
+	"block.ageoftitans.eden_wood_planks": "Eden Wooden Planks",
+	"block.ageoftitans.eden_wood_stairs": "Eden Wooden Stairs",
+	"block.ageoftitans.eden_wood_slab": "Eden Wooden Slab",
+	"block.ageoftitans.eden_wood_pressure_plate": "Eden Wooden Pressure Plate",
+	"block.ageoftitans.eden_wood_fence": "Eden Wooden Fence",
+	"block.ageoftitans.eden_wood_button": "Eden Wooden Button",
+	"block.ageoftitans.eden_leaves": "Eden Leaves",
+	"block.ageoftitans.eden_sapling": "Eden Sapling",
+	"block.ageoftitans.soul_stone": "\u00A7c\u00A7lSoul Stone",
+	
+	"commands.addsouls": "%d souls were added to %s's balance!",
+	"commands.addlevels": "%d levels were added to %s!",
+	"commands.resetlevel": "%s's abilities have been reset!",
+	"commands.setlevel": "%s's level was set to %d!",
+	"commands.setbalance": "%s's balance was set to %d!"
+	
+}

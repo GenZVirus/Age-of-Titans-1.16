@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": {
+    	"item": "minecraft:soul_sand"
+    },
+    "result": "ageoftitans:soul_shard",
+    "experience": 5.0,
+    "cookingtime": 200
+}
