@@ -1,6 +1,7 @@
 package com.GenZVirus.AgeOfTitans.Common.Network;
 
 import com.GenZVirus.AgeOfTitans.AgeOfTitans;
+import com.GenZVirus.AgeOfTitans.Common.Network.SDW.SendPlayerHandPacket;
 
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.network.NetworkRegistry;
@@ -21,6 +22,12 @@ public class PacketHandlerCommon {
 				.decoder(sendTileEntityDataPacket::decode)
 				.consumer(sendTileEntityDataPacket::handle)
 				.add();
+		
+		INSTANCE.messageBuilder(SendPlayerHandPacket.class, id++)
+		.encoder(SendPlayerHandPacket::encode)
+		.decoder(SendPlayerHandPacket::decode)
+		.consumer(SendPlayerHandPacket::handle)
+		.add();	
 
 	}
 }
