@@ -12,7 +12,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.SwordItem;
+import net.minecraft.item.TieredItem;
 import net.minecraft.util.Hand;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.MathHelper;
@@ -46,7 +46,7 @@ public class DualWieldingEventsHandler {
 		if (!event.isAttack())
 			return;
 		PlayerEntity player = Minecraft.getInstance().player;
-		if (!(player.getHeldItemOffhand().getItem() instanceof SwordItem)) { return; }
+		if (!(player.getHeldItemOffhand().getItem() instanceof TieredItem)) { return; }
 		if (left) {
 			event.setSwingHand(false);
 			player.swingArm(Hand.OFF_HAND);
@@ -67,6 +67,7 @@ public class DualWieldingEventsHandler {
 		firstPersonRenderer.prevEquippedProgressMainHand = equippedProgressMainHand;
 		firstPersonRenderer.prevEquippedProgressOffHand = equippedProgressOffHand;
 		ClientPlayerEntity clientplayerentity = mc.player;
+		if(clientplayerentity == null) return;
 		ItemStack itemstack = clientplayerentity.getHeldItemMainhand();
 		ItemStack itemstack1 = clientplayerentity.getHeldItemOffhand();
 		if (ItemStack.areItemStacksEqual(itemStackMainHand, itemstack)) {

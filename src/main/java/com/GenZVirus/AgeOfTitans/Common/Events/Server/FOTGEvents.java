@@ -2,8 +2,8 @@ package com.GenZVirus.AgeOfTitans.Common.Events.Server;
 
 import com.GenZVirus.AgeOfTitans.AgeOfTitans;
 import com.GenZVirus.AgeOfTitans.Common.Init.ItemInit;
-import com.GenZVirus.AgeOfTitans.Util.TitanPlayer;
-import com.GenZVirus.AgeOfTitans.Util.Titans;
+import com.GenZVirus.AgeOfTitansAPI.Titan.TitanPlayer;
+import com.GenZVirus.AgeOfTitansAPI.Titan.Titans;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.text.TranslationTextComponent;
@@ -25,15 +25,13 @@ public class FOTGEvents {
 			PlayerEntity player = (PlayerEntity) event.getEntityLiving();
 			player.setAbsorptionAmount(player.getAbsorptionAmount() + 20);
 			player.setHealth(player.getMaxHealth());
-			TitanPlayer titan = null;
-			for (TitanPlayer playerMSG : Titans.getTitans()) {
-				playerMSG.getPlayer().sendMessage(new TranslationTextComponent(player.getName().getUnformattedComponentText() + " has eaten the Fruit of the Gods"), player.getUniqueID());
-				if (playerMSG.getPlayer().getName().equals(player.getName())) {
-					titan = playerMSG;
-				}
+			TitanPlayer titan = Titans.getTitanFromPlayerUUID(player.getUniqueID());
+			for (PlayerEntity playerMSG : player.getServer().getPlayerList().getPlayers()) {
+				playerMSG.sendMessage(new TranslationTextComponent(player.getName().getUnformattedComponentText() + " has eaten the Fruit of the Gods"), player.getUniqueID());
 			}
 			if (titan != null)
-				titan.hasAteFOTG();
+				titan.getStats().appleEaten();
+			;
 		}
 	}
 

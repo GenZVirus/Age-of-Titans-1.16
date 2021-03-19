@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "WWW",
+        "WDW",
+        "WWW"
+    ],
+    
+    "key":
+    {
+        "D":
+        {
+            "item": "ageoftitans:titan_steel_dagger"
+        },
+         "W":
+        {
+            "item": "ageoftitans:wither_dust"
+        }
+    },
+    
+    
+    "result":
+    {
+        "item": "ageoftitans:withering_titan_steel_dagger",
+        "count": 1
+    }
+}

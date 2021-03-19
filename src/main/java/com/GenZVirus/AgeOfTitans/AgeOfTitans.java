@@ -14,12 +14,16 @@ import com.GenZVirus.AgeOfTitans.Common.Init.ModContainerTypes;
 import com.GenZVirus.AgeOfTitans.Common.Init.ModTileEntityTypes;
 import com.GenZVirus.AgeOfTitans.Common.Init.SoundInit;
 import com.GenZVirus.AgeOfTitans.Common.Network.PacketHandlerCommon;
+import com.GenZVirus.AgeOfTitansAPI.AbilitySystem.ActiveAbility;
+import com.GenZVirus.AgeOfTitansAPI.AbilitySystem.PassiveAbility;
+import com.GenZVirus.AgeOfTitansAPI.Capability.CapabilityAttachEventHandler;
+import com.GenZVirus.AgeOfTitansAPI.Capability.CapabilityStats;
+import com.GenZVirus.AgeOfTitansAPI.Registry.Registries;
 
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
@@ -56,13 +60,14 @@ public class AgeOfTitans {
 	 */
 	public static AgeOfTitans instance;
 
-	public static final ResourceLocation EDEN_DIMENSION_TYPE = new ResourceLocation(MOD_ID, "eden");
-
 	/*
 	 * AgeOfTitans class constructor
 	 */
 	public AgeOfTitans() {
-
+		
+		Registries.register(new ActiveAbility("Testing Active Ability", 10, 100, 1000, 10000));
+		Registries.register(new PassiveAbility("Testing Passive Ability", 10, 100, 1000, 10000));
+		
 		File folder = new File("config/AgeOfTitans/");
 		if (!folder.exists()) {
 			try {
@@ -142,11 +147,17 @@ public class AgeOfTitans {
 
 	private void setup(final FMLCommonSetupEvent event) {
 
-	    // Initializing the PacketHandler
-	    	
-	    	PacketHandlerCommon.init();
-	    	LOGGER.info("Packets loaded successfully");
-	    	
+		// used to define our Capabilities
+		CapabilityStats.register();
+
+		// CapabilityAttachEvent is used to attach Capabilities to vanilla objects
+		MinecraftForge.EVENT_BUS.register(CapabilityAttachEventHandler.class);
+
+		// Initializing the PacketHandler
+
+		PacketHandlerCommon.init();
+		LOGGER.info("Packets loaded successfully");
+
 	}
 
 	/*

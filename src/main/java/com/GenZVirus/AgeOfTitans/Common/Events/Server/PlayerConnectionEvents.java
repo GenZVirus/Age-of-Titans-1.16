@@ -1,9 +1,8 @@
 package com.GenZVirus.AgeOfTitans.Common.Events.Server;
 
 import com.GenZVirus.AgeOfTitans.AgeOfTitans;
-import com.GenZVirus.AgeOfTitans.FileSystem.XMLFileJava;
-import com.GenZVirus.AgeOfTitans.Util.TitanPlayer;
-import com.GenZVirus.AgeOfTitans.Util.Titans;
+import com.GenZVirus.AgeOfTitansAPI.Titan.TitanPlayer;
+import com.GenZVirus.AgeOfTitansAPI.Titan.Titans;
 
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraftforge.event.entity.player.PlayerEvent;
@@ -18,17 +17,12 @@ public class PlayerConnectionEvents {
 
 	@SubscribeEvent
 	public static void onPlayerLogout(PlayerEvent.PlayerLoggedOutEvent e) {
-		for (TitanPlayer player : Titans.getTitans())
-			if (player.getPlayer().getName().equals(e.getPlayer().getName())) {
-				XMLFileJava.save(player);
-				Titans.removeTitan(player);
-				break;
-			}
+		Titans.removeTitan(Titans.getTitanFromPlayerUUID(e.getPlayer().getUniqueID()));
 	}
 
 	@SubscribeEvent
 	public static void onPlayerLogin(PlayerEvent.PlayerLoggedInEvent e) {
-		Titans.addTitan(XMLFileJava.load((ServerPlayerEntity) e.getPlayer()));
+		Titans.addTitan(new TitanPlayer((ServerPlayerEntity) e.getPlayer()));
 	}
 
 }

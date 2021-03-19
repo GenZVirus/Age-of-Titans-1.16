@@ -7,14 +7,14 @@ import com.GenZVirus.AgeOfTitans.AgeOfTitans.AgeOfTitansItemGroup;
 import com.GenZVirus.AgeOfTitans.Common.Objects.Items.FruitOfTheGods;
 import com.GenZVirus.AgeOfTitans.Common.Objects.Items.Keystone;
 import com.GenZVirus.AgeOfTitans.Common.Objects.Items.SpecialItem;
-import com.GenZVirus.AgeOfTitans.Common.Objects.Items.Armors.HeavyTitaniumArmor.HeavyTitaniumBoots;
-import com.GenZVirus.AgeOfTitans.Common.Objects.Items.Armors.HeavyTitaniumArmor.HeavyTitaniumChestplate;
-import com.GenZVirus.AgeOfTitans.Common.Objects.Items.Armors.HeavyTitaniumArmor.HeavyTitaniumHelmet;
-import com.GenZVirus.AgeOfTitans.Common.Objects.Items.Armors.HeavyTitaniumArmor.HeavyTitaniumLeggings;
-import com.GenZVirus.AgeOfTitans.Common.Objects.Items.Armors.LightTitaniumArmor.LightTitaniumBoots;
-import com.GenZVirus.AgeOfTitans.Common.Objects.Items.Armors.LightTitaniumArmor.LightTitaniumChestplate;
-import com.GenZVirus.AgeOfTitans.Common.Objects.Items.Armors.LightTitaniumArmor.LightTitaniumHood;
-import com.GenZVirus.AgeOfTitans.Common.Objects.Items.Armors.LightTitaniumArmor.LightTitaniumLeggings;
+import com.GenZVirus.AgeOfTitans.Common.Objects.Items.Armors.HeavyTitanSteelArmor.HeavyTitanSteelBoots;
+import com.GenZVirus.AgeOfTitans.Common.Objects.Items.Armors.HeavyTitanSteelArmor.HeavyTitanSteelChestplate;
+import com.GenZVirus.AgeOfTitans.Common.Objects.Items.Armors.HeavyTitanSteelArmor.HeavyTitanSteelHelmet;
+import com.GenZVirus.AgeOfTitans.Common.Objects.Items.Armors.HeavyTitanSteelArmor.HeavyTitanSteelLeggings;
+import com.GenZVirus.AgeOfTitans.Common.Objects.Items.Armors.LightTitanSteelArmor.LightTitanSteelBoots;
+import com.GenZVirus.AgeOfTitans.Common.Objects.Items.Armors.LightTitanSteelArmor.LightTitanSteelChestplate;
+import com.GenZVirus.AgeOfTitans.Common.Objects.Items.Armors.LightTitanSteelArmor.LightTitanSteelHood;
+import com.GenZVirus.AgeOfTitans.Common.Objects.Items.Armors.LightTitanSteelArmor.LightTitanSteelLeggings;
 import com.GenZVirus.AgeOfTitans.Common.Objects.Items.Daggers.DaggerItem;
 import com.GenZVirus.AgeOfTitans.Common.Objects.Items.Daggers.DemonicDagger;
 import com.GenZVirus.AgeOfTitans.Common.Objects.Items.Orbs.OrbOfStorage;
@@ -61,39 +61,39 @@ public class ItemInit {
 	public static final RegistryObject<Item> WITHER_DUST = ITEMS.register("wither_dust", () -> new Item(new Item.Properties().group(AgeOfTitansItemGroup.instance)));
 
 	//Ingots
-	public static final RegistryObject<Item> TITANIUM_INGOT = ITEMS.register("titanium_ingot", () -> new Item(new Item.Properties().group(AgeOfTitansItemGroup.instance)));
+	public static final RegistryObject<Item> TITAN_STEEL_INGOT = ITEMS.register("titan_steel_ingot", () -> new Item(new Item.Properties().group(AgeOfTitansItemGroup.instance)));
 	
 	//TestItem
 	public static final RegistryObject<Item> TEST_ITEM = ITEMS.register("test_item", () -> new SpecialItem(new Item.Properties().group(AgeOfTitansItemGroup.instance).maxStackSize(1)));
 	
 	//Weapons
-	public static final RegistryObject<Item> TITANIUM_SWORD = ITEMS.register("titanium_sword", () -> new SwordItem(ModItemTier.MATERIAL_TITANIUM, 12, -2.4F, new Item.Properties().group(AgeOfTitansItemGroup.instance)));
-	public static final RegistryObject<Item> TITANIUM_DAGGER = ITEMS.register("titanium_dagger", () -> new DaggerItem(ModItemTier.MATERIAL_TITANIUM, 7, -1.4F, new Item.Properties().group(AgeOfTitansItemGroup.instance)));	
-	public static final RegistryObject<Item> POISONOUS_TITANIUM_DAGGER = ITEMS.register("poisonous_titanium_dagger", () -> new DaggerItem(ModItemTier.MATERIAL_TITANIUM, 7, -1.4F, new Item.Properties().group(AgeOfTitansItemGroup.instance)));	
-	public static final RegistryObject<Item> WITHERING_TITANIUM_DAGGER = ITEMS.register("withering_titanium_dagger", () -> new DaggerItem(ModItemTier.MATERIAL_TITANIUM, 7, -1.4F, new Item.Properties().group(AgeOfTitansItemGroup.instance)));	
-	public static final RegistryObject<Item> DEMONIC_DAGGER = ITEMS.register("demonic_dagger", () -> new DemonicDagger(ModItemTier.MATERIAL_TITANIUM, 17, -1.4F, new Item.Properties().group(AgeOfTitansItemGroup.instance)));	
+	public static final RegistryObject<Item> TITAN_STEEL_SWORD = ITEMS.register("titan_steel_sword", () -> new SwordItem(ModItemTier.MATERIAL_TITAN_STEEL, 12, -2.4F, new Item.Properties().group(AgeOfTitansItemGroup.instance)));
+	public static final RegistryObject<Item> TITAN_STEEL_DAGGER = ITEMS.register("titan_steel_dagger", () -> new DaggerItem(ModItemTier.MATERIAL_TITAN_STEEL, 7, -1.4F, new Item.Properties().group(AgeOfTitansItemGroup.instance)));	
+	public static final RegistryObject<Item> POISONOUS_TITAN_STEEL_DAGGER = ITEMS.register("poisonous_titan_steel_dagger", () -> new DaggerItem(ModItemTier.MATERIAL_TITAN_STEEL, 7, -1.4F, new Item.Properties().group(AgeOfTitansItemGroup.instance)));	
+	public static final RegistryObject<Item> WITHERING_TITAN_STEEL_DAGGER = ITEMS.register("withering_titan_steel_dagger", () -> new DaggerItem(ModItemTier.MATERIAL_TITAN_STEEL, 7, -1.4F, new Item.Properties().group(AgeOfTitansItemGroup.instance)));	
+	public static final RegistryObject<Item> DEMONIC_DAGGER = ITEMS.register("demonic_dagger", () -> new DemonicDagger(ModItemTier.MATERIAL_TITAN_STEEL, 17, -1.4F, new Item.Properties().group(AgeOfTitansItemGroup.instance)));	
 	
 	//Tools
-	public static final RegistryObject<Item> TITANIUM_PICKAXE = ITEMS.register("titanium_pickaxe", () -> new PickaxeItem(ModItemTier.MATERIAL_TITANIUM, 4, -2.8F, new Item.Properties().group(AgeOfTitansItemGroup.instance)));
-	public static final RegistryObject<Item> TITANIUM_SHOVEL = ITEMS.register("titanium_shovel", () -> new ShovelItem(ModItemTier.MATERIAL_TITANIUM, 2, -3.0F, new Item.Properties().group(AgeOfTitansItemGroup.instance)));
-	public static final RegistryObject<Item> TITANIUM_AXE = ITEMS.register("titanium_axe", () -> new AxeItem(ModItemTier.MATERIAL_TITANIUM, 8, -3.0F, new Item.Properties().group(AgeOfTitansItemGroup.instance)));
-	public static final RegistryObject<Item> TITANIUM_HOE = ITEMS.register("titanium_hoe", () -> new HoeItem(ModItemTier.MATERIAL_TITANIUM, 5, 0.0F, new Item.Properties().group(AgeOfTitansItemGroup.instance)));
+	public static final RegistryObject<Item> TITAN_STEEL_PICKAXE = ITEMS.register("titan_steel_pickaxe", () -> new PickaxeItem(ModItemTier.MATERIAL_TITAN_STEEL, 4, -2.8F, new Item.Properties().group(AgeOfTitansItemGroup.instance)));
+	public static final RegistryObject<Item> TITAN_STEEL_SHOVEL = ITEMS.register("titan_steel_shovel", () -> new ShovelItem(ModItemTier.MATERIAL_TITAN_STEEL, 2, -3.0F, new Item.Properties().group(AgeOfTitansItemGroup.instance)));
+	public static final RegistryObject<Item> TITAN_STEEL_AXE = ITEMS.register("titan_steel_axe", () -> new AxeItem(ModItemTier.MATERIAL_TITAN_STEEL, 8, -3.0F, new Item.Properties().group(AgeOfTitansItemGroup.instance)));
+	public static final RegistryObject<Item> TITAN_STEEL_HOE = ITEMS.register("titan_steel_hoe", () -> new HoeItem(ModItemTier.MATERIAL_TITAN_STEEL, 5, 0.0F, new Item.Properties().group(AgeOfTitansItemGroup.instance)));
 		
 	//Armor
-	public static final RegistryObject<Item> HEAVY_TITANIUM_HELMET = ITEMS.register("heavy_titanium_helmet", () -> new HeavyTitaniumHelmet(ModArmorMaterial.HEAVY_ARMOR_MATERIAL_TITANIUM, EquipmentSlotType.HEAD, new Item.Properties().group(AgeOfTitansItemGroup.instance)));
-	public static final RegistryObject<Item> HEAVY_TITANIUM_CHESTPLATE = ITEMS.register("heavy_titanium_chestplate", () -> new HeavyTitaniumChestplate(ModArmorMaterial.HEAVY_ARMOR_MATERIAL_TITANIUM, EquipmentSlotType.CHEST, new Item.Properties().group(AgeOfTitansItemGroup.instance)));
-	public static final RegistryObject<Item> HEAVY_TITANIUM_LEGGINGS = ITEMS.register("heavy_titanium_leggings", () -> new HeavyTitaniumLeggings(ModArmorMaterial.HEAVY_ARMOR_MATERIAL_TITANIUM, EquipmentSlotType.LEGS, new Item.Properties().group(AgeOfTitansItemGroup.instance)));
-	public static final RegistryObject<Item> HEAVY_TITANIUM_BOOTS = ITEMS.register("heavy_titanium_boots", () -> new HeavyTitaniumBoots(ModArmorMaterial.HEAVY_ARMOR_MATERIAL_TITANIUM, EquipmentSlotType.FEET, new Item.Properties().group(AgeOfTitansItemGroup.instance)));
+	public static final RegistryObject<Item> HEAVY_TITAN_STEEL_HELMET = ITEMS.register("heavy_titan_steel_helmet", () -> new HeavyTitanSteelHelmet(ModArmorMaterial.HEAVY_ARMOR_MATERIAL_TITAN_STEEL, EquipmentSlotType.HEAD, new Item.Properties().group(AgeOfTitansItemGroup.instance)));
+	public static final RegistryObject<Item> HEAVY_TITAN_STEEL_CHESTPLATE = ITEMS.register("heavy_titan_steel_chestplate", () -> new HeavyTitanSteelChestplate(ModArmorMaterial.HEAVY_ARMOR_MATERIAL_TITAN_STEEL, EquipmentSlotType.CHEST, new Item.Properties().group(AgeOfTitansItemGroup.instance)));
+	public static final RegistryObject<Item> HEAVY_TITAN_STEEL_LEGGINGS = ITEMS.register("heavy_titan_steel_leggings", () -> new HeavyTitanSteelLeggings(ModArmorMaterial.HEAVY_ARMOR_MATERIAL_TITAN_STEEL, EquipmentSlotType.LEGS, new Item.Properties().group(AgeOfTitansItemGroup.instance)));
+	public static final RegistryObject<Item> HEAVY_TITAN_STEEL_BOOTS = ITEMS.register("heavy_titan_steel_boots", () -> new HeavyTitanSteelBoots(ModArmorMaterial.HEAVY_ARMOR_MATERIAL_TITAN_STEEL, EquipmentSlotType.FEET, new Item.Properties().group(AgeOfTitansItemGroup.instance)));
 	
-	public static final RegistryObject<Item> LIGHT_TITANIUM_HOOD = ITEMS.register("light_titanium_hood", () -> new LightTitaniumHood(ModArmorMaterial.LIGHT_ARMOR_MATERIAL_TITANIUM, EquipmentSlotType.HEAD, new Item.Properties().group(AgeOfTitansItemGroup.instance)));
-	public static final RegistryObject<Item> LIGHT_TITANIUM_CHESTPLATE = ITEMS.register("light_titanium_chestplate", () -> new LightTitaniumChestplate(ModArmorMaterial.LIGHT_ARMOR_MATERIAL_TITANIUM, EquipmentSlotType.CHEST, new Item.Properties().group(AgeOfTitansItemGroup.instance)));
-	public static final RegistryObject<Item> LIGHT_TITANIUM_LEGGINGS = ITEMS.register("light_titanium_leggings", () -> new LightTitaniumLeggings(ModArmorMaterial.LIGHT_ARMOR_MATERIAL_TITANIUM, EquipmentSlotType.LEGS, new Item.Properties().group(AgeOfTitansItemGroup.instance)));
-	public static final RegistryObject<Item> LIGHT_TITANIUM_BOOTS = ITEMS.register("light_titanium_boots", () -> new LightTitaniumBoots(ModArmorMaterial.LIGHT_ARMOR_MATERIAL_TITANIUM, EquipmentSlotType.FEET, new Item.Properties().group(AgeOfTitansItemGroup.instance)));
+	public static final RegistryObject<Item> LIGHT_TITAN_STEEL_HOOD = ITEMS.register("light_titan_steel_hood", () -> new LightTitanSteelHood(ModArmorMaterial.LIGHT_ARMOR_MATERIAL_TITAN_STEEL, EquipmentSlotType.HEAD, new Item.Properties().group(AgeOfTitansItemGroup.instance)));
+	public static final RegistryObject<Item> LIGHT_TITAN_STEEL_CHESTPLATE = ITEMS.register("light_titan_steel_chestplate", () -> new LightTitanSteelChestplate(ModArmorMaterial.LIGHT_ARMOR_MATERIAL_TITAN_STEEL, EquipmentSlotType.CHEST, new Item.Properties().group(AgeOfTitansItemGroup.instance)));
+	public static final RegistryObject<Item> LIGHT_TITAN_STEEL_LEGGINGS = ITEMS.register("light_titan_steel_leggings", () -> new LightTitanSteelLeggings(ModArmorMaterial.LIGHT_ARMOR_MATERIAL_TITAN_STEEL, EquipmentSlotType.LEGS, new Item.Properties().group(AgeOfTitansItemGroup.instance)));
+	public static final RegistryObject<Item> LIGHT_TITAN_STEEL_BOOTS = ITEMS.register("light_titan_steel_boots", () -> new LightTitanSteelBoots(ModArmorMaterial.LIGHT_ARMOR_MATERIAL_TITAN_STEEL, EquipmentSlotType.FEET, new Item.Properties().group(AgeOfTitansItemGroup.instance)));
 
 	
 	public enum ModItemTier implements IItemTier{
-		MATERIAL_TITANIUM(8, 4000, 16.0F, 7.0F, 250, () -> {
-			return Ingredient.fromItems(ItemInit.TITANIUM_INGOT.get());
+		MATERIAL_TITAN_STEEL(8, 4000, 16.0F, 7.0F, 250, () -> {
+			return Ingredient.fromItems(ItemInit.TITAN_STEEL_INGOT.get());
 		}); 
 		
 		private final int harvestLevel;
@@ -145,11 +145,11 @@ public class ItemInit {
 	}
 	
 	public enum ModArmorMaterial implements IArmorMaterial{
-		HEAVY_ARMOR_MATERIAL_TITANIUM(AgeOfTitans.MOD_ID + ":heavy_titanium", 50, new int[] {7, 9, 11, 8}, 420, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 6.9F, () -> {
-			return Ingredient.fromItems(ItemInit.TITANIUM_INGOT.get());
+		HEAVY_ARMOR_MATERIAL_TITAN_STEEL(AgeOfTitans.MOD_ID + ":heavy_titan_steel", 50, new int[] {7, 9, 11, 8}, 420, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 6.9F, () -> {
+			return Ingredient.fromItems(ItemInit.TITAN_STEEL_INGOT.get());
 		}),
-		LIGHT_ARMOR_MATERIAL_TITANIUM(AgeOfTitans.MOD_ID + ":light_titanium", 50, new int[] {6, 7, 9, 6}, 300, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 4.7F, () -> {
-			return Ingredient.fromItems(ItemInit.TITANIUM_INGOT.get());
+		LIGHT_ARMOR_MATERIAL_TITAN_STEEL(AgeOfTitans.MOD_ID + ":light_titan_steel", 50, new int[] {6, 7, 9, 6}, 300, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 4.7F, () -> {
+			return Ingredient.fromItems(ItemInit.TITAN_STEEL_INGOT.get());
 		});
 		
 		private static final int[] MAX_DAMAGE_ARRAY = new int[] {16, 16, 16, 16};

@@ -2,11 +2,11 @@
 	"parent": "block/cube",
     "texture_size": [32, 32],
 	"textures": {
-		"0": "ageoftitans:items/titanium_sword/demonic_dagger_texture3",
-		"1": "ageoftitans:items/titanium_sword/demonic_dagger_texture2",
-		"2": "ageoftitans:items/titanium_sword/demonic_dagger_texture",
-		"3": "ageoftitans:items/titanium_sword/titanium_sword_texture4",
-		"particle": "ageoftitans:items/titanium_sword/demonic_dagger_texture3"
+		"0": "ageoftitans:items/titan_steel_arsenal/demonic_dagger_texture3",
+		"1": "ageoftitans:items/titan_steel_arsenal/demonic_dagger_texture2",
+		"2": "ageoftitans:items/titan_steel_arsenal/demonic_dagger_texture",
+		"3": "ageoftitans:items/titan_steel_arsenal/titan_steel_sword_texture4",
+		"particle": "ageoftitans:items/titan_steel_arsenal/demonic_dagger_texture3"
 	},
 	"elements": [
 		{

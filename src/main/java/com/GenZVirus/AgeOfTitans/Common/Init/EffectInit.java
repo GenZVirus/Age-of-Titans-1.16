@@ -19,7 +19,7 @@ public class EffectInit {
 	public static final DeferredRegister<Effect> MOD_EFFECTS = DeferredRegister.create(ForgeRegistries.POTIONS, AgeOfTitans.MOD_ID);
 
 	public static final RegistryObject<Effect> TITAN = MOD_EFFECTS.register("titan", () -> new ModTitanEffect(ModEffect.AOTType.TITAN, EffectType.BENEFICIAL, 0).addAttributesModifier(Attributes.MAX_HEALTH, "5D6F0BA2-1186-46AC-B896-C61C5CEE9900", 10.0D, AttributeModifier.Operation.ADDITION).addAttributesModifier(Attributes.ATTACK_DAMAGE, "648D7064-6A60-4F59-8ABE-C2C23A6DD700", 1.0D, AttributeModifier.Operation.ADDITION));
-	public static final RegistryObject<Effect> LIGHT_TITANIUM_SET = MOD_EFFECTS.register("light_titanium_set", () -> new ModRenderlessEffect(ModEffect.AOTType.TITAN, EffectType.BENEFICIAL, 0).addAttributesModifier(Attributes.MOVEMENT_SPEED, "91AEAA56-376B-4498-935B-2F7F68070635", 0.5D, AttributeModifier.Operation.MULTIPLY_TOTAL));
+	public static final RegistryObject<Effect> LIGHT_TITAN_STEEL_SET = MOD_EFFECTS.register("light_titanium_set", () -> new ModRenderlessEffect(ModEffect.AOTType.TITAN, EffectType.BENEFICIAL, 0).addAttributesModifier(Attributes.MOVEMENT_SPEED, "91AEAA56-376B-4498-935B-2F7F68070635", 0.5D, AttributeModifier.Operation.MULTIPLY_TOTAL));
 
 	
 	public static final RegistryObject<Effect> MONSTER_EASY = MOD_EFFECTS.register("monster_easy", () -> new ModRenderlessEffect(ModEffect.AOTType.TITAN, EffectType.BENEFICIAL, 0).addAttributesModifier(Attributes.MAX_HEALTH, "5D6F0BA2-1186-46AC-B896-C61C5CEE9901", 5.0D, AttributeModifier.Operation.ADDITION).addAttributesModifier(Attributes.ATTACK_DAMAGE, "648D7064-6A60-4F59-8ABE-C2C23A6DD701", 0.5D, AttributeModifier.Operation.ADDITION));

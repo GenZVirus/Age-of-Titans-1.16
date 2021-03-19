@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "   ",
+        "TLT",
+        "   "
+    ],
+    
+    "key":
+    {
+        "T":
+        {
+            "item": "ageoftitans:titan_steel_ingot"
+        },
+        "L":
+        {
+            "item": "minecraft:leather_boots"
+        }
+    },
+    
+    
+    "result":
+    {
+        "item": "ageoftitans:light_titan_steel_boots",
+        "count": 1
+    }
+}
