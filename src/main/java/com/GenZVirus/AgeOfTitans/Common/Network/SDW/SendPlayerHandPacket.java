@@ -3,7 +3,7 @@ package com.GenZVirus.AgeOfTitans.Common.Network.SDW;
 import java.util.UUID;
 import java.util.function.Supplier;
 
-import com.GenZVirus.AgeOfTitans.Common.Events.Server.SDW.PlayerEventsHandler;
+import com.GenZVirus.AgeOfTitans.Server.Events.SDW.PlayerEventsHandler;
 
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.util.Hand;

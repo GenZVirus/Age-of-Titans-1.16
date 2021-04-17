@@ -7,19 +7,23 @@ import org.apache.logging.log4j.Logger;
 
 import com.GenZVirus.AgeOfTitans.Client.Keybind.ModKeybind;
 import com.GenZVirus.AgeOfTitans.Common.Config.AOTConfig;
+import com.GenZVirus.AgeOfTitans.Common.Entities.ReaperEntity;
 import com.GenZVirus.AgeOfTitans.Common.Init.BlockInit;
 import com.GenZVirus.AgeOfTitans.Common.Init.EffectInit;
 import com.GenZVirus.AgeOfTitans.Common.Init.ItemInit;
 import com.GenZVirus.AgeOfTitans.Common.Init.ModContainerTypes;
+import com.GenZVirus.AgeOfTitans.Common.Init.ModEntityTypes;
 import com.GenZVirus.AgeOfTitans.Common.Init.ModTileEntityTypes;
 import com.GenZVirus.AgeOfTitans.Common.Init.SoundInit;
 import com.GenZVirus.AgeOfTitans.Common.Network.PacketHandlerCommon;
-import com.GenZVirus.AgeOfTitansAPI.AbilitySystem.ActiveAbility;
-import com.GenZVirus.AgeOfTitansAPI.AbilitySystem.PassiveAbility;
-import com.GenZVirus.AgeOfTitansAPI.Capability.CapabilityAttachEventHandler;
-import com.GenZVirus.AgeOfTitansAPI.Capability.CapabilityStats;
-import com.GenZVirus.AgeOfTitansAPI.Registry.Registries;
+import com.GenZVirus.AgeOfTitans.Common.OreGeneration.OreGeneration;
+import com.GenZVirus.VirusLIB.AbilitySystem.ActiveAbility;
+import com.GenZVirus.VirusLIB.AbilitySystem.PassiveAbility;
+import com.GenZVirus.VirusLIB.Capability.CapabilityAttachEventHandler;
+import com.GenZVirus.VirusLIB.Capability.CapabilityStats;
+import com.GenZVirus.VirusLIB.Registry.Registries;
 
+import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -29,6 +33,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
@@ -106,6 +111,10 @@ public class AgeOfTitans {
 
 		EffectInit.MOD_EFFECTS.register(modEventBus);
 		LOGGER.info("Effects loaded successfully");
+		
+		// Register custom entity types
+		ModEntityTypes.ENTITY_TYPES.register(modEventBus);
+		LOGGER.info("Entities loaded successfully");
 
 		// Registering custom tile entity types
 
@@ -116,7 +125,7 @@ public class AgeOfTitans {
 
 		ModContainerTypes.CONTAINER_TYPES.register(modEventBus);
 		LOGGER.info("Container Types loaded successfully");
-
+		
 		instance = this;
 
 		MinecraftForge.EVENT_BUS.register(this);
@@ -145,7 +154,13 @@ public class AgeOfTitans {
 	 * Server and Client common setup
 	 */
 
+	@SuppressWarnings("deprecation")
 	private void setup(final FMLCommonSetupEvent event) {
+		
+		DeferredWorkQueue.runLater(() -> {
+            GlobalEntityTypeAttributes.put(ModEntityTypes.REAPER.get(), ReaperEntity.setAttributes().create());
+            OreGeneration.registerOres();
+        });
 
 		// used to define our Capabilities
 		CapabilityStats.register();

@@ -17,6 +17,8 @@ import com.GenZVirus.AgeOfTitans.Common.Objects.Items.Armors.LightTitanSteelArmo
 import com.GenZVirus.AgeOfTitans.Common.Objects.Items.Armors.LightTitanSteelArmor.LightTitanSteelLeggings;
 import com.GenZVirus.AgeOfTitans.Common.Objects.Items.Daggers.DaggerItem;
 import com.GenZVirus.AgeOfTitans.Common.Objects.Items.Daggers.DemonicDagger;
+import com.GenZVirus.AgeOfTitans.Common.Objects.Items.Orbs.OrbOfEnd;
+import com.GenZVirus.AgeOfTitans.Common.Objects.Items.Orbs.OrbOfNether;
 import com.GenZVirus.AgeOfTitans.Common.Objects.Items.Orbs.OrbOfStorage;
 
 import net.minecraft.inventory.EquipmentSlotType;
@@ -50,8 +52,8 @@ public class ItemInit {
     */
 	public static final RegistryObject<Item> FRUIT_OF_THE_GODS = ITEMS.register("fruit_of_the_gods", () -> new FruitOfTheGods(new Item.Properties().group(AgeOfTitansItemGroup.instance).food(new Food.Builder().hunger(20).saturation(20.0f).setAlwaysEdible().build())));
 //	public static final RegistryObject<Item> ORB_OF_EDEN = ITEMS.register("orb_of_eden", () -> new OrbOfEden(new Item.Properties().group(AgeOfTitansItemGroup.instance).maxStackSize(1)));
-//	public static final RegistryObject<Item> ORB_OF_NETHER = ITEMS.register("orb_of_nether", () -> new OrbOfNether(new Item.Properties().group(AgeOfTitansItemGroup.instance).maxStackSize(1)));
-//	public static final RegistryObject<Item> ORB_OF_END = ITEMS.register("orb_of_end", () -> new OrbOfEnd(new Item.Properties().group(AgeOfTitansItemGroup.instance).maxStackSize(1)));
+	public static final RegistryObject<Item> ORB_OF_NETHER = ITEMS.register("orb_of_nether", () -> new OrbOfNether(new Item.Properties().group(AgeOfTitansItemGroup.instance).maxStackSize(1)));
+	public static final RegistryObject<Item> ORB_OF_END = ITEMS.register("orb_of_end", () -> new OrbOfEnd(new Item.Properties().group(AgeOfTitansItemGroup.instance).maxStackSize(1)));
 //	public static final RegistryObject<Item> ORB_OF_SUMMONING = ITEMS.register("orb_of_summoning", () -> new OrbOfSummoning(new Item.Properties().group(AgeOfTitansItemGroup.instance).maxStackSize(1)));
 //	public static final RegistryObject<Item> ORB_OF_DISLOCATION = ITEMS.register("orb_of_dislocation", () -> new OrbOfDislocation(new Item.Properties().group(AgeOfTitansItemGroup.instance).maxStackSize(1)));
 	public static final RegistryObject<Item> ORB_OF_STORAGE = ITEMS.register("orb_of_storage", () -> new OrbOfStorage(new Item.Properties().group(AgeOfTitansItemGroup.instance).maxStackSize(1)));
@@ -60,7 +62,7 @@ public class ItemInit {
 	public static final RegistryObject<Item> SOUL_SHARD = ITEMS.register("soul_shard", () -> new Item(new Item.Properties().group(AgeOfTitansItemGroup.instance)));
 	public static final RegistryObject<Item> WITHER_DUST = ITEMS.register("wither_dust", () -> new Item(new Item.Properties().group(AgeOfTitansItemGroup.instance)));
 
-	//Ingots
+	//Materials
 	public static final RegistryObject<Item> TITAN_STEEL_INGOT = ITEMS.register("titan_steel_ingot", () -> new Item(new Item.Properties().group(AgeOfTitansItemGroup.instance)));
 	
 	//TestItem
@@ -90,6 +92,8 @@ public class ItemInit {
 	public static final RegistryObject<Item> LIGHT_TITAN_STEEL_LEGGINGS = ITEMS.register("light_titan_steel_leggings", () -> new LightTitanSteelLeggings(ModArmorMaterial.LIGHT_ARMOR_MATERIAL_TITAN_STEEL, EquipmentSlotType.LEGS, new Item.Properties().group(AgeOfTitansItemGroup.instance)));
 	public static final RegistryObject<Item> LIGHT_TITAN_STEEL_BOOTS = ITEMS.register("light_titan_steel_boots", () -> new LightTitanSteelBoots(ModArmorMaterial.LIGHT_ARMOR_MATERIAL_TITAN_STEEL, EquipmentSlotType.FEET, new Item.Properties().group(AgeOfTitansItemGroup.instance)));
 
+	//Heart
+	public static final RegistryObject<Item> TITAN_HEART = ITEMS.register("titan_heart", () -> new Item(new Item.Properties().group(AgeOfTitansItemGroup.instance).maxStackSize(1)));	
 	
 	public enum ModItemTier implements IItemTier{
 		MATERIAL_TITAN_STEEL(8, 4000, 16.0F, 7.0F, 250, () -> {

@@ -1,6 +1,7 @@
 package com.GenZVirus.AgeOfTitans.Common.Network;
 
 import com.GenZVirus.AgeOfTitans.AgeOfTitans;
+import com.GenZVirus.AgeOfTitans.Client.Network.ReaperLoadPacket;
 import com.GenZVirus.AgeOfTitans.Common.Network.SDW.SendPlayerHandPacket;
 
 import net.minecraft.util.ResourceLocation;
@@ -11,7 +12,7 @@ public class PacketHandlerCommon {
 
 	private static final String PROTOCOL_VERSION = "1";
 	public static final SimpleChannel INSTANCE = NetworkRegistry.newSimpleChannel(
-			new ResourceLocation(AgeOfTitans.MOD_ID, "spell"), () -> PROTOCOL_VERSION, PROTOCOL_VERSION::equals,
+			new ResourceLocation(AgeOfTitans.MOD_ID, "aot"), () -> PROTOCOL_VERSION, PROTOCOL_VERSION::equals,
 			PROTOCOL_VERSION::equals);
 
 	public static void init() {
@@ -29,5 +30,28 @@ public class PacketHandlerCommon {
 		.consumer(SendPlayerHandPacket::handle)
 		.add();	
 
+		INSTANCE.messageBuilder(ReaperInteractionPacket.class, id++)
+		.encoder(ReaperInteractionPacket::encode)
+		.decoder(ReaperInteractionPacket::decode)
+		.consumer(ReaperInteractionPacket::handle)
+		.add();	
+		
+		INSTANCE.messageBuilder(ReaperLoadPacket.class, id++)
+		.encoder(ReaperLoadPacket::encode)
+		.decoder(ReaperLoadPacket::decode)
+		.consumer(ReaperLoadPacket::handle)
+		.add();	
+		
+		INSTANCE.messageBuilder(PlayerPaymentPacket.class, id++)
+		.encoder(PlayerPaymentPacket::encode)
+		.decoder(PlayerPaymentPacket::decode)
+		.consumer(PlayerPaymentPacket::handle)
+		.add();	
+		
+		INSTANCE.messageBuilder(GivePlayerItemsPacket.class, id++)
+		.encoder(GivePlayerItemsPacket::encode)
+		.decoder(GivePlayerItemsPacket::decode)
+		.consumer(GivePlayerItemsPacket::handle)
+		.add();
 	}
 }

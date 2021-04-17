@@ -110,8 +110,12 @@
 	"item.ageoftitans.soul_shard": "\u00A7e\u00A7nSoul Shard",
 	"item.ageoftitans.wither_dust": "\u00A74\u00A7nWither Dust",
 	
+	"item.ageoftitans.titan_heart": "\u00A7bTitan's Heart",
+	
 	"block.ageoftitans.titan_steel_block": "\u00A7eTitan Steel Block",
 	"block.ageoftitans.titan_steel_ore": "\u00A7eTitan Steel Ore",
+	"block.ageoftitans.titan_steel_nether_ore": "\u00A7eTitan Steel Ore",
+	"block.ageoftitans.titan_steel_end_ore": "\u00A7eTitan Steel Ore",
 	"block.ageoftitans.titan_locker": "\u00A76\u00A7lTitan's Locker",
 	"block.ageoftitans.eden_wood": "Eden Wood",
 	"block.ageoftitans.eden_wood_log": "Eden Wooden Log",
